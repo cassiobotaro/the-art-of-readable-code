@@ -1,0 +1,10 @@
+[project]
+name = "the-art-of-readable-code"
+version = "0.1.0"
+description = "🎼 Designing and Implementing a “Minute/Hour Counter”"
+readme = "README.md"
+authors = [
+    { name = "cassiobotaro", email = "cassiobotaro@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
