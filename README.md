@@ -8,7 +8,7 @@ Each directory contains a different example from the book.
 
 We need to keep track of how many bytes a web server has transferred over the past minute and over the past hour. Here’s an illustration of how these totals are maintained:
 
-![Two dimensions graph of how many bytes a web server has transferred over the past minute and over the past hour](./problema.png "Two dimensions graph of how many bytes a web server has transferred over the past minute and over the past hour").
+![Two dimensions graph of how many bytes a web server has transferred over the past minute and over the past hour](./problem.png "Two dimensions graph of how many bytes a web server has transferred over the past minute and over the past hour").
 
 ## Running the code
 
