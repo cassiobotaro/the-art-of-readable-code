@@ -9,16 +9,15 @@ def time() -> t_time:
     return int(py_time())
 
 
-MINUTE_IN_SECONDS = 60
-HOUR_IN_SECONDS = 3600
-
-
 class MinuteHourCounter:
     """Track the cumulative counts over the past minute and over the past hour.
 
     Useful, for example, to track recent bandwidth usage."""
 
-    @dataclass
+    MINUTE_IN_SECONDS = 60
+    HOUR_IN_SECONDS = 3600
+
+    @dataclass(frozen=True)
     class Event:
         count: int
         time: t_time
@@ -44,8 +43,8 @@ class MinuteHourCounter:
 
     def minute_count(self) -> int:
         """Return the accumulated count over the past 60 seconds."""
-        return self._count_since(time() - MINUTE_IN_SECONDS)
+        return self._count_since(time() - self.MINUTE_IN_SECONDS)
 
     def hour_count(self) -> int:
         """Return the accumulated count over the past 3600 seconds."""
-        return self._count_since(time() - HOUR_IN_SECONDS)
+        return self._count_since(time() - self.HOUR_IN_SECONDS)
