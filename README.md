@@ -15,4 +15,7 @@ We need to keep track of how many bytes a web server has transferred over the pa
 ```bash
 # to run naive solution
 uv run naive.py
+
+# to run conveyor belt solution
+uv run conveyor_belt.py
 ```
