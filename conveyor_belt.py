@@ -1,6 +1,6 @@
 from collections import deque
-from dataclasses import dataclass
 from time import time as py_time
+from typing import NamedTuple
 
 # Type to represent time in seconds since the Unix epoch (January 1, 1970).
 type t_time = int
@@ -18,8 +18,7 @@ class MinuteHourCounter:
     MINUTE_IN_SECONDS = 60
     HOUR_IN_SECONDS = 3600
 
-    @dataclass(frozen=True)
-    class Event:
+    class Event(NamedTuple):
         count: int
         time: t_time
 
