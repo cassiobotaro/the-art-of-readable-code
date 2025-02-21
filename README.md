@@ -43,4 +43,5 @@ print(counter.hour_count()) # 30
 | Time-bucketed  | 99            | O(1)                               | O(#buckets)²         | 1 part per 60       |
 
 ¹ - In the original c++ code, ~5mb
+
 ² - In the original c++ code, ~500 bytes
