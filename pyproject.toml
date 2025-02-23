@@ -8,3 +8,6 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = []
+
+[tool.poetry]
+package-mode = false
