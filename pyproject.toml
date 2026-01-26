@@ -13,6 +13,6 @@ dependencies = []
 package-mode = false
 
 [tool.poetry.group.dev.dependencies]
-ruff = "^0.14.13"
+ruff = "^0.14.14"
 mypy = "^1.19.1"
 
