@@ -14,5 +14,5 @@ package-mode = false
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.15.9"
-mypy = "^1.20.0"
+mypy = "^1.20.1"
 
