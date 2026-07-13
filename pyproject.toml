@@ -6,13 +6,15 @@ readme = "README.md"
 authors = [
     { name = "cassiobotaro", email = "cassiobotaro@gmail.com" }
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 dependencies = []
 
-[tool.poetry]
-package-mode = false
+[tool.uv]
+package = false
 
-[tool.poetry.group.dev.dependencies]
-ruff = "^0.15.20"
-mypy = "^2.1.0"
+[dependency-groups]
+dev = [
+    "ruff>=0.15.21",
+    "ty>=0.0.59",
+]
 
