@@ -3,10 +3,10 @@ from dataclasses import dataclass
 from time import time as py_time
 
 # Type to represent time in seconds since the Unix epoch (January 1, 1970).
-type t_time = int
+type TTime = int
 
 
-def time() -> t_time:
+def time() -> TTime:
     return int(py_time())
 
 
@@ -21,7 +21,7 @@ class MinuteHourCounter:
     @dataclass(frozen=True)
     class Event:
         count: int
-        time: t_time
+        time: TTime
 
     def __init__(self) -> None:
         self.minute_events: deque[MinuteHourCounter.Event] = deque()
@@ -57,7 +57,7 @@ class MinuteHourCounter:
         self.shift_old_events(time())
         return self._hour_count
 
-    def shift_old_events(self, now_secs: t_time):
+    def shift_old_events(self, now_secs: TTime):
         minute_ago = now_secs - self.MINUTE_IN_SECONDS
         hour_ago = now_secs - self.HOUR_IN_SECONDS
 

@@ -2,10 +2,10 @@ from collections import deque
 from time import time as py_time
 
 # Type to represent time in seconds since the Unix epoch (January 1, 1970).
-type t_time = int
+type TTime = int
 
 
-def time() -> t_time:
+def time() -> TTime:
     return int(py_time())
 
 
@@ -58,9 +58,9 @@ class TrailingBucketCounter:
     def __init__(self, num_buckets: int, secs_per_bucket: int):
         self.buckets = ConveyorQueue(num_buckets)
         self.secs_per_bucket = secs_per_bucket
-        self.last_update_time: t_time = 0
+        self.last_update_time: TTime = 0
 
-    def _update(self, now: t_time):
+    def _update(self, now: TTime):
         """Calculate how many buckets of time have passed and Shift() accordingly."""
         current_bucket = now // self.secs_per_bucket
         last_update_bucket = self.last_update_time // self.secs_per_bucket
@@ -68,11 +68,11 @@ class TrailingBucketCounter:
         self.buckets.shift(current_bucket - last_update_bucket)
         self.last_update_time = now
 
-    def add(self, count: int, now: t_time):
+    def add(self, count: int, now: TTime):
         self._update(now)
         self.buckets.add_to_back(count)
 
-    def trailing_count(self, now: t_time) -> int:
+    def trailing_count(self, now: TTime) -> int:
         """Return the total count over the last num_buckets worth of time."""
         self._update(now)
         return self.buckets.total_sum

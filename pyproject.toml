@@ -14,7 +14,7 @@ package = false
 
 [dependency-groups]
 dev = [
-    "ruff>=0.15.22",
+    "ruff>=0.16.0",
     "ty>=0.0.63",
 ]
 

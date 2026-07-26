@@ -30,8 +30,8 @@ counter.add(10)
 counter.add(10)
 counter.add(10)
 
-print(counter.minute_count()) # 30
-print(counter.hour_count()) # 30
+print(counter.minute_count())  # 30
+print(counter.hour_count())  # 30
 ```
 
 ## Solution
