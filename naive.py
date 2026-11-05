@@ -41,10 +41,12 @@ class MinuteHourCounter:
             count += event.count
         return count
 
+    @property
     def minute_count(self) -> int:
         """Return the accumulated count over the past 60 seconds."""
         return self._count_since(time() - self.MINUTE_IN_SECONDS)
 
+    @property
     def hour_count(self) -> int:
         """Return the accumulated count over the past 3600 seconds."""
         return self._count_since(time() - self.HOUR_IN_SECONDS)

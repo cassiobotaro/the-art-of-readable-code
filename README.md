@@ -20,7 +20,7 @@ uv run python -i naive.py
 uv run python -i conveyor_belt.py
 
 # to run time bucket design solution
-uv run -i time_bucket_design.py
+uv run python -i time_bucket_design.py
 
 ```
 
@@ -30,8 +30,8 @@ counter.add(10)
 counter.add(10)
 counter.add(10)
 
-print(counter.minute_count())  # 30
-print(counter.hour_count())  # 30
+print(counter.minute_count)  # 30
+print(counter.hour_count)  # 30
 ```
 
 ## Solution
