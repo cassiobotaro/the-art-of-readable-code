@@ -38,8 +38,8 @@ print(counter.hour_count)  # 30
 
 | solution       | lines of code | cost per hour_count                | memory usage         | error in hour_count |
 | -------------- | ------------- | ---------------------------------- | -------------------- | ------------------- |
-| Naive solution | 49            | O(#events-per-hour) (~3.6 million) | unbounded            | 1 part per 3600     |
-| Conveyor belt  | 73            | O(1)                               | O(#events-per-hour)¹ | 1 part per 3600     |
+| Naive solution | 52            | O(#events-per-hour) (~3.6 million) | unbounded            | 1 part per 3600     |
+| Conveyor belt  | 74            | O(1)                               | O(#events-per-hour)¹ | 1 part per 3600     |
 | Time-bucketed  | 99            | O(1)                               | O(#buckets)²         | 1 part per 60       |
 
 ¹ - In the original c++ code, ~5mb
